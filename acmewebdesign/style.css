@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4rem;
+}
+
+header {
+  background-color: #38414c;
+  color: white;
+  border-bottom: 3px solid #d3411d;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li a {
+  display: inline-block;
+  padding: 10px;
+}
+
+li a:hover {
+  color: #d3411d;
+}
+
+/* Section with background image */
+.view {
+  background: url('/photo.jfif') no-repeat center center/cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  color: white;
+  position: relative;
+}
+
+.view * {
+  z-index: 1;
+}
+.view::before{
+  content: '';
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.information h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.information p {
+  font-size: 18px;
+  margin: auto 0;
+  max-width: 840px;
+  line-height: 1.6rem;
+}
+
+/* Subscription Section  */
+.subscription {
+  background: #38414c;
+  color: white;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.subscribe p {
+  font-size: 20px;
+}
+
+.icons {
+  background: #f4f4f4;
+}
+
+.benefits {
+  display: flex;
+  text-align: center;
+}
+
+.benefits .items {
+  padding: 20px;
+}
+
+.benefits h3 {
+  margin-bottom: 8px;
+}
+
+footer {
+  background: #d3411d;
+  padding: 30px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/* About Page  */
+.about-us {
+  display: flex;
+}
+
+.flex-item1 {
+  width: 66.66%;
+}
+
+.flex-item2 {
+  margin-left: 30px;
+  padding: 20px;
+  width: 33.33%;
+  height: 300px;
+}
+
+.flex-item2 h3, 
+.flex-item1 h2,
+.flex-item1 p {
+  margin-bottom: 20px;
+}
+
+.flex-item1 .bg-dark {
+  padding: 15px;
+}
+
+.services {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.services h2 {
+  font-size: 20px;
+}
+/* Utilities */
+.orange, 
+.current {
+  color: #d3411d;
+}
+
+.content {
+  max-width: 1024px;
+  margin: auto;
+  padding: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.input {
+  padding: 11px;
+}
+
+button {
+  background-color: #d3411d;
+  padding: 13px;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #1c63b9d3
+}
+
+i {
+  color: #d3411d;
+  margin-bottom: 10px;
+}
+
+.bg-dark {
+  background: #38414c;
+  color: white;
+}
+
+.bg-light {
+  background: #e7e6e8;
+}
+
+/* Input, form ... */
+.flex-item2 input,
+.flex-item2 textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media(max-width: 767px) {
+  .view h1 {
+    line-height: 2.4rem;
+    margin-bottom: 12px;
+  }
+
+  header h1{
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe p {
+    margin-bottom: 15px;
+  }
+
+  .subscribe input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .subscribe button {
+    width: 100%;
+  }
+
+  .benefits {
+    flex-direction: column;
+  }
+
+  .benefits .item-1,
+  .benefits .item-2 {
+    border-bottom: 1px solid #333;
+  }
+
+  .about-us {
+    flex-direction: column;
+  }
+
+  .flex-item1, .flex-item2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .flex-item2 {
+    height: 200px;
+  }
+
+  .longer {
+    height: 400px;
+  }
+
+  textarea {
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+  }
+
+}
+
+
